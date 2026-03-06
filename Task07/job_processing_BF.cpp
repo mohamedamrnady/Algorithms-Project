@@ -12,7 +12,7 @@ using namespace std;
  * 
  * Brute Force approach:
  * Generates all possible permutations of job sequences and calculates the total penalty for each.
- * Time Complexity: O(n!), where n is the number of jobs.
+ * Time Complexity: O(n.n!), where n is the number of jobs.
  */
 
 // Structure to hold the final optimization result

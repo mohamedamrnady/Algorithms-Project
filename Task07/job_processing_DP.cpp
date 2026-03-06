@@ -41,10 +41,10 @@ void optimizeJobScheduling(vector<Job>& jobs)
     for(const auto j : jobs) total_time += j.time;
 
     // dp[i][t] = min penalty for first i jobs at time t
-    vector<vector<int>> dp(size + 1, vector<int>(total_time + 1, 0));
+    vector dp(size + 1, vector(total_time + 1, 0));
 
     // Fill DP table
-    for (int i = 1; i <= (int)size; ++i) {
+    for (int i = 1; i <= static_cast<int>(size); ++i) {
         const int p_i = jobs[i-1].penalty;
         const int t_i = jobs[i-1].time;
         const int d_i = jobs[i-1].deadline;
@@ -81,7 +81,7 @@ void optimizeJobScheduling(vector<Job>& jobs)
         }
     }
 
-    for (int i = (int)size; i > 0; i--) {
+    for (int i = static_cast<int>(size); i > 0; i--) {
         const int jobTime = jobs[i-1].time;
         const int jobDeadline = jobs[i-1].deadline;
         
