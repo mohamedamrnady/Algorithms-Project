@@ -18,7 +18,7 @@ void hanoi3Peg(int n, char source, char destination, char aux)
     hanoi3Peg(n - 1, aux, destination, source);
 }
 
-void buildDPTable(int maxDisks)
+void buildDPTable(int maxDisks)\
 {
     dp[0] = 0;
     dp[1] = 1;
