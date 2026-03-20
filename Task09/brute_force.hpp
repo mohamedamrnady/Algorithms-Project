@@ -2,9 +2,16 @@
 #define BRUTE_FORCE_H
 
 #include <vector>
-#include "point.h"
-#include "clustering_common.h"
+#include "point.hpp"
 
-ClusterResult solveBruteForce(const std::vector<Point>& points, int k);
+using namespace std;
+
+struct ClusterResult {
+    vector<int> assignment;
+    double cost;
+};
+
+// brute force clustering
+ClusterResult solveBruteForce(const vector<Point>& points, int k);
 
 #endif
