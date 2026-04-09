@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Board.hpp"
+#include "constants.c"
 
 // Devise an algorithm for the following task: given a 2^n × 2^n (n > 1) board with one missing square, tile it with
 // right trominoes of only three colors so that no pair of trominoes that share an edge have the same color.
@@ -13,15 +14,15 @@ int main()
     cout << "Enter n (board size = 2^n x 2^n): ";
     int n;
     cin >> n;
-    if (n < 2)
+    if (n < BOARD_SIZE_MIN)
     {
-        cout << "Invalid n. Setting to 2.\n";
-        n = 2;
+        cout << "Invalid n. Setting to " << BOARD_SIZE_MIN << ".\n";
+        n = BOARD_SIZE_MIN;
     }
-    else if (n > 4)
+    else if (n > BOARD_SIZE_MAX)
     {
-        cout << "Invalid n. Setting to 4.\n";
-        n = 4;
+        cout << "Invalid n. Setting to " << BOARD_SIZE_MAX << ".\n";
+        n = BOARD_SIZE_MAX;
     }
     cout << "Enter missing square coordinates 'x y': ";
     int missing_x, missing_y;

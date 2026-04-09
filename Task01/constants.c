@@ -1,0 +1,2 @@
+#define BOARD_SIZE_MIN 1
+#define BOARD_SIZE_MAX 4

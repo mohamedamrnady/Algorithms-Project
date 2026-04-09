@@ -1,6 +1,7 @@
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #include <windowsx.h>
+#include "constants.c"
 
 #include <algorithm>
 #include <string>
@@ -9,8 +10,8 @@
 
 namespace
 {
-    constexpr int kMinN = 1; // 2x2
-    constexpr int kMaxN = 4; // 16x16 (keeps brute-force coloring responsive)
+    constexpr int kMinN = BOARD_SIZE_MIN;
+    constexpr int kMaxN = BOARD_SIZE_MAX;
 
     constexpr int kTopBarHeight = 44;
     constexpr int kPadding = 12;

@@ -10,12 +10,14 @@ add_executable(
         task1_cli
         Task01/main.cpp
         Task01/Board.hpp
+        Task01/constants.c
 )
  
 if (WIN32)
     add_executable(task1_gui WIN32
              Task01/gui_main.cpp
              Task01/Board.hpp
+             Task01/constants.c
     )
 endif()
 
