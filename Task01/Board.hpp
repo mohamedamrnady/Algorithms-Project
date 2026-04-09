@@ -273,8 +273,8 @@ public:
 
     ~Board() { freeTiles(); }
 
-    // Board(const Board &) = delete;
-    // Board &operator=(const Board &) = delete;
+    Board(const Board &) = delete;
+    Board &operator=(const Board &) = delete;
 
     void getMissingSquare(int &x, int &y) const
     {
