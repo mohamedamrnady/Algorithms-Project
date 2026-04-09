@@ -9,6 +9,7 @@ include_directories(Task07)
 add_executable(
         task1_template
         Task01/main.cpp
+        Task01/Board.hpp
 )
 
 add_executable(task7_DP
