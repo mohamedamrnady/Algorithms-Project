@@ -144,3 +144,9 @@ This phase has two parts: building the adjacency graph and then backtracking.
   - For the tilings produced by the divide-and-conquer phase, the graph is typically sparse, so backtracking often finishes quickly for small $N$.
 
 Because Phase B can still spike in runtime, the GUI demo is capped at 16×16 to keep interaction responsive.
+
+---
+
+## Reference
+
+- https://github.com/Gholamrezadar/Triomino-Tiling
